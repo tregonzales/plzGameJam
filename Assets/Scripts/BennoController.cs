@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Benno : MonoBehaviour {
+public class BennoController : MonoBehaviour {
 
   public float speed;
 

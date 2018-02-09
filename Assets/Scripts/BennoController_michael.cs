@@ -21,10 +21,10 @@ public class BennoController_michael : MonoBehaviour {
 
     void Move(float horizontalInput)
     {
-		if (horizontalInput != 0)
-			Debug.Log (movement.x);
-		rigidbody = gameObject.GetComponent<Rigidbody2D> ();
-		rigidbody.AddTorque (torque);
+		if (horizontalInput != 0) {
+			Debug.Log (horizontalInput);
+			rigidbody.AddTorque (horizontalInput * torque);
+		}
 	}
 
 

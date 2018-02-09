@@ -17,12 +17,16 @@ public class BrookeBennoController : MonoBehaviour {
 		System.Random random = new System.Random ();
 		float amount = (float)random.Next (40)*0.1f;
 		transform.position += (new Vector3(Input.GetAxis("Horizontal")*amount, Input.GetAxis("Vertical")*amount, 0) * speed * Time.deltaTime);
-//		if (Input.GetKeyDown(KeyCode.D)){
-//			if (holding) {
-//				transform.DetachChildren();
-//			}
-//		}
-	}
+        //		if (Input.GetKeyDown(KeyCode.D)){
+        //			if (holding) {
+        //				transform.DetachChildren();
+        //			}
+        //		}
+        if (Input.GetKey("r"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 
   	void Start()
     {

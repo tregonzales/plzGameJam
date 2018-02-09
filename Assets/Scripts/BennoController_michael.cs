@@ -31,6 +31,11 @@ public class BennoController_michael : MonoBehaviour {
 			heldObject.transform.position = gameObject.transform.position + hammerOffset;
 		}
         Move(Input.GetAxisRaw("Horizontal"));
+
+        if (Input.GetKey("r"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
     void Move(float horizontalInput)
     {

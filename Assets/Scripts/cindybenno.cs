@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class cindybenno : MonoBehaviour {
     public float speed = 10, jumpVelocity = 10;
@@ -20,6 +22,12 @@ public class cindybenno : MonoBehaviour {
         Move(Input.GetAxisRaw("Horizontal"));
         if (Input.GetButtonDown("Jump"))
             Jump();
+
+        if (Input.GetKey("r"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
     }
 
     void Move(float horizonalInput)

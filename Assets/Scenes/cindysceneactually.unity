@@ -4230,6 +4230,21 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 50213409446941752, guid: c6d0ed01dca67df4aa997c423cb358e5,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50213409446941752, guid: c6d0ed01dca67df4aa997c423cb358e5,
+        type: 2}
+      propertyPath: m_Mass
+      value: 3.6981363
+      objectReference: {fileID: 0}
+    - target: {fileID: 50213409446941752, guid: c6d0ed01dca67df4aa997c423cb358e5,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6d0ed01dca67df4aa997c423cb358e5, type: 2}
   m_IsPrefabParent: 0

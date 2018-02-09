@@ -22,7 +22,7 @@ public class cookieScript : MonoBehaviour {
 			yeaBoi.Stop();
 			Destroy(gameObject);
 			GameObject.Find("benno").GetComponent<AudioSource>().Play();
-			GameManager.instance.LoadNextSceneAfterSeconds(3f, "cindyscene");
+			GameManager.instance.LoadNextSceneAfterSeconds(3f, "cindysceneactually");
 		}
 	}
 }

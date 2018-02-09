@@ -60,4 +60,11 @@ public class BennoController_michael : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.gameObject.CompareTag("victory")){
+			Debug.Log ("you won");
+			//NEXT LEVEL
+		}
+	}
+
 }

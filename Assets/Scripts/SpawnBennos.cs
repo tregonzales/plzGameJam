@@ -7,16 +7,17 @@ using UnityEngine.SceneManagement;
 public class SpawnBennos : MonoBehaviour {
 
     public GameObject benno;
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         StartCoroutine(SpawnBennoCoroutine());
     }
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKey("r"))
+        if (Input.GetKey("q"))
         {
-            Application.LoadLevel("TitleScreen");
+            Application.Quit();
         }
     }
 

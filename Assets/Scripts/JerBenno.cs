@@ -55,7 +55,7 @@ public class JerBenno : MonoBehaviour {
 
         if (other.gameObject.CompareTag("coin"))
         {
-            // SceneManager.LoadScene(SCENE);
+            SceneManager.LoadScene("BonusWIn");
 
         }
     }

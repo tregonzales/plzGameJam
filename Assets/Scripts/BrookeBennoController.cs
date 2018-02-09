@@ -31,6 +31,16 @@ public class BrookeBennoController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other){
 		canGrab = true;
+
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.tag == "collidable") {
+//			while(other.gameObject.transform.position.x > -5) {
+				other.gameObject.transform.position -= (new Vector3(0.1f, 0, 0) * speed * Time.deltaTime);
+//			other.gameObject.transform.position = Vector3.MoveTowards(other.gameObject.transform.position, target.position, step);
+//			}
+		}
 	}
 
 	void OnCollisionStay2D(Collision2D coll) {
@@ -45,5 +55,6 @@ public class BrookeBennoController : MonoBehaviour {
 				}
 			}
 		}
+			
 	}
 }

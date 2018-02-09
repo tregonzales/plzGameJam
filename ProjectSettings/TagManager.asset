@@ -9,6 +9,7 @@ TagManager:
   - bomb
   - hat
   - cam
+  - collidable
   layers:
   - Default
   - TransparentFX

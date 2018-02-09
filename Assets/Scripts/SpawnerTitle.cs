@@ -20,7 +20,7 @@ public class SpawnerTitle : MonoBehaviour {
     {
         if (Input.GetKey("space"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("BrookeScene");
         }
     }
 

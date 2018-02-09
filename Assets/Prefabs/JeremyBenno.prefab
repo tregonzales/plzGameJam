@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  explosionPrefab: {fileID: 1444009389813150, guid: 3337b50930e2a8843aeb8d9a45a3dd99,
+    type: 2}
 --- !u!212 &212165334336093566
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,22 +1,40 @@
 
 using UnityEngine;
+
 using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class BennoController_Mike : MonoBehaviour {
+public class BennoController : MonoBehaviour {
 
-  public float speed;
-	private Rigidbody2D rigidbody;
-	public float torque = 0.1f;
+    public float speed = 10, jumpVelocity = 10;
+    Transform myTrans;
+    Rigidbody2D myBody;
 
-  void Update() {
-    transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime;
-		rigidbody = gameObject.GetComponent<Rigidbody2D> ();
-		rigidbody.AddTorque (torque);
-  }
-
-  void Start()
+    void Start()
     {
-        
+        //  myBody = this.rigidbody2D;//Unity 4.6-
+        myBody = this.GetComponent<Rigidbody2D>();//Unity 5+
+        myTrans = this.transform;
     }
+
+    void FixedUpdate()
+    {
+
+        Move(Input.GetAxisRaw("Horizontal"));
+        if (Input.GetButtonDown("Jump"))
+            Jump();
+    }
+
+    void Move(float horizonalInput)
+    {
+
+        Vector2 moveVel = myBody.velocity;
+        moveVel.x = horizonalInput * speed;
+        myBody.velocity = moveVel;
+    }
+
+    public void Jump()
+    {
+        myBody.velocity += jumpVelocity * Vector2.up;
+    }
+
 }

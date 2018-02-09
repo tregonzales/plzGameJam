@@ -1,13 +1,31 @@
 
 using UnityEngine;
+
 using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class BennoController_Mike : MonoBehaviour {
+public class BennoController : MonoBehaviour {
 
-  public float speed;
-	private Rigidbody2D rigidbody;
-	public float torque = 0.1f;
+    public float speed = 10, jumpVelocity = 10;
+    Transform myTrans;
+    Rigidbody2D myBody;
+
+    void Start()
+    {
+        //  myBody = this.rigidbody2D;//Unity 4.6-
+        myBody = this.GetComponent<Rigidbody2D>();//Unity 5+
+        myTrans = this.transform;
+    }
+
+    void FixedUpdate()
+    {
+
+        Move(Input.GetAxisRaw("Horizontal"));
+        if (Input.GetButtonDown("Jump"))
+            Jump();
+    }
+
+    void Move(float horizonalInput)
+    {
 
   void Update() {
 		Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime;
@@ -15,10 +33,11 @@ public class BennoController_Mike : MonoBehaviour {
 			Debug.Log (movement.x);
 		rigidbody = gameObject.GetComponent<Rigidbody2D> ();
 		rigidbody.AddTorque (torque);
-  }
+	}
 
-  void Start()
+    public void Jump()
     {
-        
+        myBody.velocity += jumpVelocity * Vector2.up;
     }
+
 }

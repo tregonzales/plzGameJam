@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - grabbable
+  - Rocket
+  - bomb
+  - hat
+  - cam
   layers:
   - Default
   - TransparentFX

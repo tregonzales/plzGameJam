@@ -2,6 +2,7 @@
 using UnityEngine;
 
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class BennoController_michael : MonoBehaviour {
 
@@ -62,7 +63,8 @@ public class BennoController_michael : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.CompareTag("victory")){
-			Debug.Log ("you won");
+			//Debug.Log ("you won");
+			SceneManager.LoadScene ("treScene");
 			//NEXT LEVEL
 		}
 	}

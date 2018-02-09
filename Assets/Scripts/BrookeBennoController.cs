@@ -46,6 +46,8 @@ public class BrookeBennoController : MonoBehaviour {
 			if (other.transform.position.x < 0) {
 				Debug.Log ("end of game");
 				other.transform.GetChild (0).GetComponent<SpriteRenderer> ().sortingOrder = 10;
+				GameManager.instance.LoadNextSceneAfterSeconds (5f, "mikeScene");
+
 			}
 		}
 	}

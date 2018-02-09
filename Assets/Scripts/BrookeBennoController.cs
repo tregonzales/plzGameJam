@@ -10,7 +10,8 @@ public class BrookeBennoController : MonoBehaviour {
   	public float speed;
 	private bool canGrab;
 	private bool holding;
-
+	public bool isCowOnGoal;
+//	private SpriteRenderer sprite;
 
   	void Update() {
 		System.Random random = new System.Random ();
@@ -27,6 +28,8 @@ public class BrookeBennoController : MonoBehaviour {
     {
 		canGrab = false;
 		holding = false;
+		isCowOnGoal = false;
+//		sprite = GetComponent<SpriteRenderer> ();
     }
 
 	void OnCollisionEnter2D(Collision2D other){
@@ -40,6 +43,10 @@ public class BrookeBennoController : MonoBehaviour {
 				other.gameObject.transform.position -= (new Vector3(0.1f, 0, 0) * speed * Time.deltaTime);
 //			other.gameObject.transform.position = Vector3.MoveTowards(other.gameObject.transform.position, target.position, step);
 //			}
+			if (other.transform.position.x < 0) {
+				Debug.Log ("end of game");
+				other.transform.GetChild (0).GetComponent<SpriteRenderer> ().sortingOrder = 10;
+			}
 		}
 	}
 

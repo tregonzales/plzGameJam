@@ -23,7 +23,7 @@ public class BennoController_Tre : MonoBehaviour {
     }
 
     if (Input.GetKeyDown(KeyCode.R)){
-        GameManager.instance.RestartTheGameAfterSeconds(.5);
+        GameManager.instance.RestartTheGameAfterSeconds(0.5f);
     }
   }
 

@@ -20,10 +20,7 @@ public class JerBenno : MonoBehaviour {
 
     }
 
-    void Start()
-    {
 
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -53,6 +50,12 @@ public class JerBenno : MonoBehaviour {
             Instantiate(explosionPrefab, transform.position, transform.rotation);
             gameObject.transform.position = new Vector3(1000, 0, 0);
             Destroy(other.gameObject);
+
+        }
+
+        if (other.gameObject.CompareTag("coin"))
+        {
+            // SceneManager.LoadScene(SCENE);
 
         }
     }

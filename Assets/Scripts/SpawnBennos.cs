@@ -16,7 +16,7 @@ public class SpawnBennos : MonoBehaviour {
     void Update () {
         if (Input.GetKey("r"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Application.LoadLevel("TitleScreen");
         }
     }
 

@@ -5,11 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - grabbable
-  - Rocket
-  - bomb
-  - hat
-  - cam
-  - collidable
+  - cookie
+  - yeaBoi
   layers:
   - Default
   - TransparentFX

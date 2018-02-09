@@ -33,8 +33,12 @@ public class GameManager : MonoBehaviour {
 		StartCoroutine (LoadSceneAfterSeconds (seconds, SceneManager.GetActiveScene().name));
 	}
 
+	public void LoadNextSceneAfterSeconds(float seconds, string sceneName){
+		StartCoroutine (LoadSceneAfterSeconds (seconds, sceneName));
+	}
+
 	// Coroutine to start the game again
-	public IEnumerator LoadSceneAfterSeconds(float seconds, string sceneName){
+	IEnumerator LoadSceneAfterSeconds(float seconds, string sceneName){
 		yield return new WaitForSeconds (seconds);
 		SceneManager.LoadScene (sceneName);
 	}

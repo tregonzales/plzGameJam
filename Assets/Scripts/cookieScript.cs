@@ -8,6 +8,7 @@ public class cookieScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		yeaBoi = GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
@@ -20,6 +21,8 @@ public class cookieScript : MonoBehaviour {
 			Destroy(other.gameObject);
 			yeaBoi.Stop();
 			Destroy(gameObject);
+			GameObject.Find("benno").GetComponent<AudioSource>().Play();
+			GameManager.instance.LoadSceneAfterSeconds(3f, "cindyscene");
 		}
 	}
 }

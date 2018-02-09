@@ -30,13 +30,13 @@ public class GameManager : MonoBehaviour {
 	/// </summary>
 	/// <param name="seconds">Seconds.</param>
 	public void RestartTheGameAfterSeconds(float seconds){
-		StartCoroutine (LoadSceneAfterSeconds (seconds));
+		StartCoroutine (LoadSceneAfterSeconds (seconds, SceneManager.GetActiveScene().name));
 	}
 
 	// Coroutine to start the game again
-	IEnumerator LoadSceneAfterSeconds(float seconds){
+	public IEnumerator LoadSceneAfterSeconds(float seconds, string sceneName){
 		yield return new WaitForSeconds (seconds);
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		SceneManager.LoadScene (sceneName);
 	}
 }
 
